@@ -103,3 +103,10 @@ function cadastrarProduto(input: unknown) {
 
 cadastrarProduto("Celular");
 cadastrarProduto(123);
+
+// never
+function generateError(message: string, code: number) {
+  throw { message: message, errorCode: code };
+}
+
+generateError("O codigo falhou", 500);
